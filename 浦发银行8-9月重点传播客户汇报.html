@@ -1,0 +1,2064 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>浦发银行 8-9 月重点传播方案</title>
+  <style>
+    :root {
+      --blue-950: #06122c;
+      --blue-900: #0a1c43;
+      --blue-800: #12356f;
+      --blue-700: #19539a;
+      --red-700: #b81727;
+      --red-600: #d92d3c;
+      --gold-500: #d8b86c;
+      --gold-300: #f4df9d;
+      --paper: #f7f4eb;
+      --ink: #f9fbff;
+      --ink-soft: rgba(249, 251, 255, .78);
+      --ink-dim: rgba(249, 251, 255, .58);
+      --dark-card: rgba(5, 16, 41, .72);
+      --glass: rgba(255, 255, 255, .1);
+      --glass-line: rgba(255, 255, 255, .2);
+      --shadow: 0 30px 80px rgba(0, 0, 0, .35);
+      --radius: 8px;
+      --ease: cubic-bezier(.2, .8, .2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--blue-950);
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+      font-size: clamp(20px, 1.45vw, 24px);
+      line-height: 1.48;
+      letter-spacing: 0;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .deck {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .deck::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(90deg, rgba(6, 18, 44, .98) 0%, rgba(6, 18, 44, .9) 36%, rgba(8, 24, 58, .52) 70%, rgba(6, 18, 44, .92) 100%),
+        url("assets/generated/site-background-night-shanghai-stage-v2.png") center / cover no-repeat;
+    }
+
+    .deck::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 18% 22%, rgba(216, 184, 108, .2), transparent 27%),
+        radial-gradient(circle at 76% 68%, rgba(217, 45, 60, .18), transparent 30%),
+        linear-gradient(180deg, rgba(6, 18, 44, .08), rgba(6, 18, 44, .8));
+    }
+
+    .topbar {
+      position: fixed;
+      z-index: 50;
+      top: 18px;
+      left: 50%;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 18px;
+      align-items: center;
+      width: min(1320px, calc(100vw - 40px));
+      padding: 10px 14px;
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: 999px;
+      background: rgba(4, 13, 32, .74);
+      box-shadow: 0 18px 46px rgba(0, 0, 0, .3);
+      transform: translateX(-50%);
+      backdrop-filter: blur(20px);
+    }
+
+    .brand {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      min-width: 0;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--red-600), #ff6a50);
+      box-shadow: 0 0 0 4px rgba(217, 45, 60, .12);
+      font-size: 18px;
+    }
+
+    .deck-title {
+      min-width: 0;
+      overflow: hidden;
+      color: rgba(255, 255, 255, .88);
+      font-size: clamp(18px, 1.5vw, 23px);
+      font-weight: 900;
+      text-align: center;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .progress {
+      display: grid;
+      gap: 3px;
+      min-width: 72px;
+      text-align: right;
+      color: #fff;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .progress small {
+      color: var(--ink-dim);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .slide {
+      position: relative;
+      min-height: 100vh;
+      padding: 112px 0 72px;
+      display: grid;
+      align-items: center;
+      isolation: isolate;
+    }
+
+    .slide.clean {
+      background: linear-gradient(135deg, rgba(5, 16, 41, .95), rgba(10, 28, 67, .97));
+    }
+
+    .slide.spotlight::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(90deg, rgba(6, 18, 44, .96) 0%, rgba(6, 18, 44, .8) 47%, rgba(6, 18, 44, .26) 100%),
+        url("assets/generated/site-background-night-shanghai-stage-v2.png") center / cover no-repeat;
+    }
+
+    .slide.cover {
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 78% 18%, rgba(217, 45, 60, .32), transparent 31%),
+        radial-gradient(circle at 14% 84%, rgba(216, 184, 108, .22), transparent 28%),
+        linear-gradient(135deg, #06122c 0%, #102f68 48%, #081735 100%);
+    }
+
+    .slide.cover::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(90deg, rgba(216, 184, 108, .28), transparent 1px) 0 0 / 120px 100%,
+        radial-gradient(circle at 50% 60%, rgba(255, 224, 148, .16), transparent 38%);
+      opacity: .45;
+    }
+
+    .slide-inner {
+      width: min(1360px, calc(100vw - 64px));
+      margin: 0 auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, .92fr) minmax(460px, 1.08fr);
+      gap: clamp(36px, 5vw, 76px);
+      align-items: center;
+    }
+
+    .grid.reverse {
+      grid-template-columns: minmax(500px, 1.06fr) minmax(0, .94fr);
+    }
+
+    .copy {
+      position: relative;
+      z-index: 2;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      color: var(--gold-300);
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    .kicker::before {
+      content: attr(data-no);
+      display: grid;
+      place-items: center;
+      min-width: 54px;
+      height: 42px;
+      padding: 0 12px;
+      border: 1px solid rgba(244, 223, 157, .42);
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(216, 184, 108, .12);
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 820px;
+      margin-bottom: 28px;
+      color: #fff;
+      font-size: clamp(62px, 7.4vw, 118px);
+      font-weight: 950;
+      line-height: .98;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      max-width: 940px;
+      margin-bottom: 26px;
+      color: #fff;
+      font-size: clamp(44px, 5vw, 76px);
+      font-weight: 950;
+      line-height: 1.06;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin-bottom: 14px;
+      color: #fff;
+      font-size: clamp(26px, 2.4vw, 36px);
+      font-weight: 900;
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 840px;
+      margin-bottom: 30px;
+      color: var(--ink-soft);
+      font-size: clamp(24px, 2.1vw, 34px);
+      font-weight: 700;
+      line-height: 1.36;
+    }
+
+    .body-text {
+      color: var(--ink-soft);
+      font-size: clamp(21px, 1.65vw, 26px);
+    }
+
+    .quote {
+      margin: 28px 0;
+      padding: 28px 32px;
+      border-left: 6px solid var(--gold-500);
+      background: rgba(255, 255, 255, .09);
+      box-shadow: var(--shadow);
+      color: #fff;
+      font-size: clamp(28px, 2.8vw, 44px);
+      font-weight: 900;
+      line-height: 1.22;
+    }
+
+    .panel {
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: var(--radius);
+      background: var(--dark-card);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .panel-pad {
+      padding: clamp(26px, 3.2vw, 44px);
+    }
+
+    .art {
+      position: relative;
+      z-index: 1;
+    }
+
+    .art img {
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 34px 58px rgba(0, 0, 0, .38));
+    }
+
+    .art.small img {
+      width: min(760px, 100%);
+      margin: 0 auto;
+    }
+
+    .hero-art img {
+      transform: translateY(24px) scale(1.08);
+      transform-origin: bottom center;
+    }
+
+    .cover-scene {
+      position: relative;
+      z-index: 2;
+      width: min(940px, 100%);
+      margin: 0 auto;
+      filter: drop-shadow(0 34px 58px rgba(0, 0, 0, .38));
+      animation: sceneRise 1.2s var(--ease) .2s both;
+    }
+
+    .cover-pill-row .pill {
+      opacity: 0;
+      transform: translateY(16px);
+      animation: pillIn .65s var(--ease) forwards;
+    }
+
+    .cover-pill-row .pill:nth-child(1) { animation-delay: 1.25s; }
+    .cover-pill-row .pill:nth-child(2) { animation-delay: 1.55s; }
+    .cover-pill-row .pill:nth-child(3) { animation-delay: 1.85s; }
+
+    .chips,
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 22px 0 0;
+    }
+
+    .chip,
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 8px 16px;
+      border: 1px solid rgba(255, 255, 255, .2);
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(255, 255, 255, .1);
+      font-size: 19px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .pill.gold {
+      border-color: rgba(244, 223, 157, .6);
+      color: #19130a;
+      background: linear-gradient(135deg, #f5de9a, #c99c43);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .three-col {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .step-card,
+    .text-card,
+    .metric-card {
+      padding: 24px;
+      border: 1px solid rgba(255, 255, 255, .17);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, .09);
+    }
+
+    .text-card strong,
+    .step-card strong,
+    .metric-card strong {
+      display: block;
+      margin-bottom: 9px;
+      color: #fff;
+      font-size: clamp(24px, 2vw, 31px);
+      font-weight: 900;
+      line-height: 1.18;
+    }
+
+    .text-card span,
+    .step-card span,
+    .metric-card span {
+      color: var(--ink-soft);
+      font-size: clamp(19px, 1.45vw, 23px);
+      line-height: 1.38;
+    }
+
+    .list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .list li {
+      position: relative;
+      padding-left: 24px;
+      color: var(--ink-soft);
+      font-size: clamp(20px, 1.5vw, 24px);
+      line-height: 1.38;
+    }
+
+    .list li::before {
+      content: "";
+      position: absolute;
+      top: .62em;
+      left: 0;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--gold-500);
+      box-shadow: 0 0 0 5px rgba(216, 184, 108, .12);
+    }
+
+    .axis {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .axis-middle {
+      display: grid;
+      place-items: center;
+      width: 118px;
+      color: #fff;
+      font-size: 38px;
+      font-weight: 950;
+    }
+
+    .formula {
+      display: grid;
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .formula-row {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 18px;
+      align-items: center;
+      padding: 22px;
+      border: 1px solid rgba(255, 255, 255, .16);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, .08);
+    }
+
+    .formula-row b {
+      color: var(--gold-300);
+      font-size: 28px;
+      font-weight: 950;
+    }
+
+    .formula-row span {
+      color: #fff;
+      font-size: 28px;
+      font-weight: 900;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 26px;
+    }
+
+    .timeline .step-card {
+      min-height: 270px;
+    }
+
+    .time {
+      display: inline-flex;
+      margin-bottom: 16px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      color: var(--gold-300);
+      background: rgba(216, 184, 108, .12);
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .ticket-demo {
+      display: grid;
+      gap: 22px;
+    }
+
+    .call-button,
+    .select-button {
+      min-height: 56px;
+      border: 1px solid rgba(244, 223, 157, .55);
+      border-radius: 999px;
+      padding: 12px 22px;
+      color: #17110a;
+      background: linear-gradient(135deg, #f8e5a7, #c49339);
+      box-shadow: 0 18px 38px rgba(0, 0, 0, .22);
+      font-size: 21px;
+      font-weight: 950;
+    }
+
+    .number-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .number-card {
+      min-height: 96px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: var(--radius);
+      color: rgba(255, 255, 255, .52);
+      background: rgba(255, 255, 255, .08);
+      font-size: 34px;
+      font-weight: 950;
+      transition: transform .25s var(--ease), color .25s var(--ease), background .25s var(--ease);
+    }
+
+    .number-card.is-on {
+      transform: translateY(-8px);
+      color: #fff;
+      background: rgba(217, 45, 60, .76);
+      box-shadow: 0 0 0 6px rgba(217, 45, 60, .14);
+    }
+
+    .tier-layout,
+    .float-layout {
+      display: grid;
+      grid-template-columns: 390px minmax(0, 1fr);
+      gap: 24px;
+      align-items: stretch;
+      margin-top: 28px;
+    }
+
+    .tier-tabs,
+    .float-tabs {
+      display: grid;
+      gap: 10px;
+    }
+
+    .tier-button,
+    .float-button {
+      width: 100%;
+      min-height: 78px;
+      padding: 14px 18px;
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: var(--radius);
+      color: #fff;
+      background: rgba(255, 255, 255, .08);
+      text-align: left;
+      font-size: 20px;
+      font-weight: 900;
+      transition: transform .2s var(--ease), background .2s var(--ease), border-color .2s var(--ease);
+    }
+
+    .tier-button small,
+    .float-button small {
+      display: block;
+      margin-top: 5px;
+      color: var(--ink-dim);
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    .tier-button.is-active,
+    .float-button.is-active {
+      transform: translateX(8px);
+      border-color: rgba(244, 223, 157, .7);
+      background: linear-gradient(135deg, rgba(217, 45, 60, .8), rgba(18, 53, 111, .85));
+    }
+
+    .tier-detail,
+    .float-detail {
+      min-height: 410px;
+      display: grid;
+      grid-template-columns: minmax(270px, .42fr) minmax(0, 1.18fr);
+      gap: 22px;
+      align-items: center;
+      padding: clamp(26px, 3vw, 42px);
+    }
+
+    .tier-detail h3,
+    .float-detail h3 {
+      font-size: clamp(34px, 3.6vw, 58px);
+    }
+
+    .detail-art {
+      align-self: center;
+    }
+
+    .detail-art img {
+      width: min(430px, 100%);
+      margin: 0 auto;
+    }
+
+    .benefit-showcase {
+      position: relative;
+      min-height: 470px;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+      gap: 18px;
+      overflow: hidden;
+      padding: 26px;
+      border-radius: var(--radius);
+      background: radial-gradient(circle at 52% 46%, rgba(244, 223, 157, .12), transparent 54%);
+    }
+
+    .tier-detail-copy .lead {
+      font-size: clamp(24px, 2vw, 31px);
+    }
+
+    .tier-detail-copy .body-text {
+      font-size: clamp(19px, 1.45vw, 22px);
+    }
+
+    .benefit-piece {
+      width: var(--piece-w, 180px);
+      display: grid;
+      gap: 8px;
+      justify-items: center;
+      align-content: start;
+      animation: pieceIn .45s var(--ease) both;
+    }
+
+    .benefit-crop {
+      width: 100%;
+      height: clamp(132px, 13vw, 210px);
+      display: grid;
+      place-items: end center;
+    }
+
+    .benefit-crop img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: bottom center;
+      filter: drop-shadow(0 20px 22px rgba(0, 0, 0, .32));
+    }
+
+    .benefit-label {
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(4, 13, 32, .62);
+      font-size: 17px;
+      font-weight: 900;
+      line-height: 1.1;
+    }
+
+    .benefit-rank {
+      display: inline-flex;
+      margin-bottom: 18px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      color: #141009;
+      background: linear-gradient(135deg, #f6df9d, #c99a38);
+      font-size: 20px;
+      font-weight: 950;
+    }
+
+    .pool-full-visual {
+      display: grid;
+      align-content: center;
+      min-height: 540px;
+      overflow: hidden;
+      padding: 18px;
+    }
+
+    .pool-full-visual img {
+      width: min(720px, 100%);
+      margin: 0 auto;
+      filter: drop-shadow(0 28px 48px rgba(0, 0, 0, .34));
+    }
+
+    .pool {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .pool-card {
+      min-height: 230px;
+      padding: 26px;
+      border: 1px solid rgba(255, 255, 255, .17);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, .08);
+      transition: transform .2s var(--ease), background .2s var(--ease);
+    }
+
+    .pool-card:hover,
+    .pool-card.is-active {
+      transform: translateY(-10px);
+      background: rgba(217, 45, 60, .55);
+    }
+
+    .pool-layout {
+      display: grid;
+      grid-template-columns: minmax(0, .72fr) minmax(520px, 1.28fr);
+      gap: 24px;
+      align-items: stretch;
+      margin-top: 26px;
+    }
+
+    .pool-layout .pool {
+      grid-template-columns: 1fr;
+      margin-top: 0;
+    }
+
+    .pool-card {
+      cursor: pointer;
+    }
+
+    .transition-stage {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      min-height: 470px;
+      position: relative;
+      overflow: hidden;
+      padding: 32px;
+    }
+
+    .transition-stage img {
+      width: min(880px, 100%);
+      margin: 0 auto;
+      animation: floatPulse 5s ease-in-out infinite;
+    }
+
+    .transition-path {
+      position: absolute;
+      left: 10%;
+      right: 10%;
+      bottom: 42px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .path-node {
+      min-height: 64px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(244, 223, 157, .5);
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(4, 13, 32, .7);
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .path-node:nth-child(1) { animation: nodeGlow 4s infinite 0s; }
+    .path-node:nth-child(2) { animation: nodeGlow 4s infinite .8s; }
+    .path-node:nth-child(3) { animation: nodeGlow 4s infinite 1.6s; }
+    .path-node:nth-child(4) { animation: nodeGlow 4s infinite 2.4s; }
+
+    .map-tags {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 26px;
+    }
+
+    .official-board {
+      position: relative;
+      overflow: hidden;
+      min-height: 560px;
+      padding: clamp(30px, 4vw, 56px);
+      margin-top: 26px;
+    }
+
+    .official-board::before {
+      content: "";
+      position: absolute;
+      inset: -4% -2%;
+      background: url("assets/generated/page12-shanghai-map-linework-transparent-v1.png") center / contain no-repeat;
+      opacity: .22;
+      filter: drop-shadow(0 30px 48px rgba(0, 0, 0, .2));
+    }
+
+    .official-facts {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .fact-card {
+      min-height: 170px;
+      padding: 4px 10px;
+      border-left: 4px solid rgba(244, 223, 157, .74);
+      background: transparent;
+    }
+
+    .fact-card b {
+      display: block;
+      color: var(--gold-300);
+      font-size: 21px;
+      font-weight: 950;
+    }
+
+    .fact-card span {
+      display: block;
+      margin-top: 8px;
+      color: #fff;
+      font-size: clamp(26px, 2.4vw, 38px);
+      font-weight: 950;
+      line-height: 1.15;
+    }
+
+    .official-tags {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-top: 190px;
+    }
+
+    .theme-tag {
+      min-height: 90px;
+      display: grid;
+      place-items: center;
+      padding: 14px;
+      border: 1px solid rgba(255, 255, 255, .2);
+      border-radius: var(--radius);
+      color: #fff;
+      background: rgba(255, 255, 255, .08);
+      font-size: 23px;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .theme-tag:nth-child(odd) {
+      background: rgba(217, 45, 60, .26);
+    }
+
+    .location-map {
+      position: relative;
+      min-height: 610px;
+      overflow: hidden;
+      padding: 28px;
+    }
+
+    .location-map img {
+      position: absolute;
+      inset: auto 0 0 0;
+      width: 100%;
+      opacity: .62;
+      filter: drop-shadow(0 30px 44px rgba(0, 0, 0, .34));
+    }
+
+    .location-tag {
+      position: absolute;
+      z-index: 2;
+      width: 18px;
+      height: 18px;
+      min-width: 0;
+      padding: 0;
+      border: 1px solid rgba(244, 223, 157, .58);
+      border-radius: 50%;
+      background: var(--red-600);
+      box-shadow: 0 0 0 8px rgba(217, 45, 60, .2), 0 12px 28px rgba(0, 0, 0, .22);
+      transform: translate(-50%, -50%);
+    }
+
+    .location-photo-strip {
+      position: absolute;
+      z-index: 3;
+      left: 24px;
+      right: 24px;
+      bottom: 22px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .location-photo {
+      min-height: 104px;
+      border: 1px solid rgba(244, 223, 157, .24);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(0, 0, 0, .15)),
+        url("assets/generated/site-background-night-shanghai-stage-v2.png") center / cover no-repeat;
+      box-shadow: 0 18px 30px rgba(0, 0, 0, .22);
+    }
+
+    .location-photo:nth-child(2) { background-position: 32% 48%; }
+    .location-photo:nth-child(3) { background-position: 68% 44%; }
+    .location-photo:nth-child(4) { background-position: 84% 58%; }
+
+    .reference-card {
+      margin-top: 24px;
+      overflow: hidden;
+    }
+
+    .reference-head {
+      display: flex;
+      gap: 18px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 26px;
+    }
+
+    .reference-body {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 26px;
+      transition: max-height .35s var(--ease), padding .35s var(--ease);
+    }
+
+    .reference-card.is-open .reference-body {
+      max-height: 320px;
+      padding: 0 26px 26px;
+    }
+
+    .role-strip,
+    .summary-flow {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .bridge-stage {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 110px minmax(0, 1fr);
+      gap: 24px;
+      align-items: center;
+      margin-top: 28px;
+    }
+
+    .bridge-art {
+      min-height: 440px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      padding: 24px;
+    }
+
+    .bridge-art img {
+      width: min(560px, 100%);
+      filter: drop-shadow(0 28px 44px rgba(0, 0, 0, .32));
+    }
+
+    .bridge-arrow {
+      display: grid;
+      place-items: center;
+      color: var(--gold-300);
+      font-size: 72px;
+      font-weight: 950;
+    }
+
+    .bridge-lines {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .role-strip .text-card,
+    .summary-flow .text-card {
+      min-height: 180px;
+    }
+
+    .float-track {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(130px, 1fr));
+      gap: 12px;
+      align-items: end;
+      margin: 24px 0 0;
+      padding: 24px;
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, .06);
+      overflow-x: auto;
+    }
+
+    .float-mini {
+      min-width: 130px;
+      border: 0;
+      background: transparent;
+      opacity: .42;
+      transition: opacity .2s var(--ease), transform .2s var(--ease), filter .2s var(--ease);
+    }
+
+    .float-mini img {
+      width: 160px;
+      max-width: none;
+      margin: 0 auto;
+      filter: drop-shadow(0 16px 18px rgba(0, 0, 0, .34));
+    }
+
+    .float-mini.is-active {
+      opacity: 1;
+      transform: translateY(-12px) scale(1.04);
+      filter: saturate(1.15);
+    }
+
+    .float-detail .detail-art img {
+      width: min(520px, 100%);
+    }
+
+    .booklet {
+      position: relative;
+      perspective: 1200px;
+    }
+
+    .booklet img {
+      transition: transform .5s var(--ease);
+      transform-origin: left center;
+    }
+
+    .booklet.is-open img {
+      transform: rotateY(-18deg) translateX(-18px) scale(1.02);
+      opacity: .58;
+    }
+
+    .booklet-spread {
+      position: absolute;
+      inset: 12% 2% 22%;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding: 18px;
+      border-radius: var(--radius);
+      background: linear-gradient(90deg, #fbf4dc, #fffaf0);
+      box-shadow: 0 30px 55px rgba(0, 0, 0, .32);
+      opacity: 0;
+      transform: rotateY(42deg) scale(.72);
+      transform-origin: left center;
+      transition: opacity .45s var(--ease), transform .45s var(--ease);
+      pointer-events: none;
+    }
+
+    .booklet.is-open .booklet-spread {
+      opacity: 1;
+      transform: rotateY(0) scale(1);
+    }
+
+    .booklet-page {
+      display: grid;
+      align-content: start;
+      gap: 10px;
+      min-height: 230px;
+      padding: 18px;
+      border-radius: 6px;
+      color: #101522;
+      background: rgba(255, 255, 255, .72);
+    }
+
+    .booklet-page b {
+      color: var(--red-700);
+      font-size: 24px;
+      font-weight: 950;
+    }
+
+    .booklet-page span {
+      font-size: 19px;
+      font-weight: 800;
+      line-height: 1.28;
+    }
+
+    .linkage-path {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .footer-note {
+      margin-top: 28px;
+      color: var(--ink-dim);
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity .55s var(--ease), transform .55s var(--ease);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @keyframes floatPulse {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-12px) scale(1.02); }
+    }
+
+    @keyframes nodeGlow {
+      0%, 100% {
+        background: rgba(4, 13, 32, .7);
+        box-shadow: none;
+      }
+      38%, 55% {
+        background: rgba(217, 45, 60, .82);
+        box-shadow: 0 0 0 8px rgba(217, 45, 60, .14);
+      }
+    }
+
+    @keyframes openLeftLid {
+      0% { transform: rotateY(0) rotateZ(0) translateY(0); opacity: 1; }
+      100% { transform: rotateY(-68deg) rotateZ(-8deg) translate(-22%, -22%); opacity: .92; }
+    }
+
+    @keyframes openRightLid {
+      0% { transform: rotateY(0) rotateZ(0) translateY(0); opacity: 1; }
+      100% { transform: rotateY(68deg) rotateZ(8deg) translate(22%, -22%); opacity: .92; }
+    }
+
+    @keyframes sceneRise {
+      0% { opacity: 0; transform: translateY(48px) scale(.86); filter: brightness(.68); }
+      58% { opacity: 1; transform: translateY(-8px) scale(1.03); filter: brightness(1.08); }
+      100% { opacity: 1; transform: translateY(0) scale(1); filter: brightness(1); }
+    }
+
+    @keyframes coverGlow {
+      0% { opacity: 0; transform: scale(.72); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes sweepLight {
+      0% { opacity: 0; transform: translateX(-34%); }
+      40% { opacity: 1; }
+      100% { opacity: 0; transform: translateX(34%); }
+    }
+
+    @keyframes pillIn {
+      100% { opacity: 1; transform: none; }
+    }
+
+    @keyframes pieceIn {
+      0% { opacity: 0; transform: translateY(16px) scale(.94); }
+      100% { opacity: 1; transform: none; }
+    }
+
+    @media (max-width: 1040px) {
+      .topbar {
+        grid-template-columns: auto auto;
+      }
+
+      .deck-title {
+        grid-column: 1 / -1;
+        text-align: left;
+      }
+
+      .grid,
+      .grid.reverse,
+      .tier-layout,
+      .float-layout,
+      .tier-detail,
+      .float-detail,
+      .axis,
+      .pool-layout,
+      .official-board,
+      .bridge-stage {
+        grid-template-columns: 1fr;
+      }
+
+      .axis-middle {
+        width: auto;
+        min-height: 62px;
+      }
+
+      .timeline,
+      .pool,
+      .three-col,
+      .map-tags,
+      .role-strip,
+      .summary-flow,
+      .linkage-path {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero-art img {
+        transform: none;
+      }
+    }
+
+    @media (max-width: 720px) {
+      body {
+        font-size: 18px;
+      }
+
+      .slide {
+        padding: 132px 0 54px;
+      }
+
+      .slide-inner {
+        width: min(100vw - 28px, 1360px);
+      }
+
+      .topbar {
+        width: calc(100vw - 20px);
+        top: 10px;
+        border-radius: 20px;
+      }
+
+      .brand {
+        font-size: 16px;
+      }
+
+      .two-col,
+      .timeline,
+      .pool,
+      .three-col,
+      .map-tags,
+      .role-strip,
+      .summary-flow,
+      .number-row,
+      .reference-body,
+      .official-facts,
+      .pool-prizes,
+      .linkage-path {
+        grid-template-columns: 1fr;
+      }
+
+      .formula-row {
+        grid-template-columns: 1fr;
+      }
+
+      .transition-path {
+        position: static;
+        grid-template-columns: 1fr;
+        margin-top: 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="deck">
+    <header class="topbar" aria-label="页面导航">
+      <a class="brand" href="#p00" aria-label="回到封面"><span class="brand-mark">浦</span><span>来浦发</span></a>
+      <div class="deck-title" id="deckTitle">开启新可能</div>
+      <div class="progress"><span id="pageNow">00</span><small>/ 24</small></div>
+    </header>
+
+    <main>
+      <section class="slide cover" id="p00" data-page="00" data-title="封面页">
+        <div class="slide-inner grid">
+          <div class="copy reveal">
+            <div class="kicker" data-no="00">客户汇报方案</div>
+            <h1>来浦发<br>开启新可能</h1>
+            <p class="lead">IP卡首发机制 × 上海旅游节整合传播</p>
+            <div class="pill-row cover-pill-row">
+              <span class="pill gold">办卡有惊喜</span>
+              <span class="pill">用卡有期待</span>
+              <span class="pill">乐游一座城</span>
+            </div>
+            <p class="footer-note">上海卡睿微文化传播有限公司 敬呈<br>2026年7月27日</p>
+          </div>
+          <div class="art hero-art reveal" aria-label="城市盲盒主视觉">
+            <img class="cover-scene" src="assets/generated/page00-cover-city-unbox-transparent-v1.png" alt="上海城市盲盒与来浦发IP形象主视觉">
+          </div>
+        </div>
+      </section>
+
+      <section class="slide clean" id="p01" data-page="01">
+        <div class="slide-inner">
+          <div class="copy reveal">
+            <div class="kicker" data-no="01">总览页</div>
+            <h2>两个方案，同一条项目推进线</h2>
+            <p class="lead">8 月方案解决“如何让年轻人主动来办这张卡、并持续使用这张卡”；<br>9 月方案解决“如何借上海旅游节，把浦发的 IP、产品、权益和城市文旅场景集中展示出来”。</p>
+          </div>
+          <div class="axis reveal">
+            <div class="text-card">
+              <strong>8 月 IP 卡</strong>
+              <span>办卡 = 入场券；用卡 = 游乐场。先把 IP 卡从支付工具变成年轻人愿意拥有、愿意晒、愿意持续参与的生活入口。</span>
+            </div>
+            <div class="axis-middle">连接</div>
+            <div class="text-card">
+              <strong>9 月旅游节</strong>
+              <span>用“开箱”方式打开城市文旅生态，把花车、路线、权益、网点、产品服务放进一套更清晰的传播结构。</span>
+            </div>
+          </div>
+          <div class="chips reveal">
+            <span class="chip">新</span>
+            <span class="chip">开箱 / 盲盒</span>
+            <span class="chip">城市体验</span>
+            <span class="chip">浦发权益</span>
+            <span class="chip">产品矩阵</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide clean" id="p02" data-page="02">
+        <div class="slide-inner grid">
+          <div class="copy reveal">
+            <div class="kicker" data-no="02">我们的理解</div>
+            <h2>一张卡的使命，不止于支付</h2>
+            <p class="lead">浦发银行拥有一个经过市场验证的“硬控广大方”——来来、浦浦、发发。现在，IP 要从品牌吉祥物变成业务发动机。</p>
+            <div class="quote">怎么让年轻人主动来办这张卡？<br>怎么让办了卡的人舍不得换掉它？</div>
+          </div>
+          <div class="panel panel-pad reveal">
+            <h3>判断</h3>
+            <ul class="list">
+              <li>IP 卡不是单次发卡动作，而是一套可持续经营的年轻化入口。</li>
+              <li>办卡要有一次性的“大惊喜”，用卡要有持续的小期待。</li>
+              <li>从 8 月 IP 卡到 9 月旅游节，真正延续的是“打开新体验”的机制。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide clean" id="p03" data-page="03">
+        <div class="slide-inner">
+          <div class="copy reveal">
+            <div class="kicker" data-no="03">核心策略总览</div>
+            <h2>一个公式，两个板块</h2>
+          </div>
+          <div class="formula reveal">
+            <div class="formula-row"><b>办卡</b><span>入场券：一次性的大惊喜</span></div>
+            <div class="formula-row"><b>用卡</b><span>游乐场：持续的小期待</span></div>
+          </div>
+          <div class="two-col reveal" style="margin-top:24px;">
+            <div class="text-card">
+              <strong>板块一·办卡权益：「你的卡号决定你的惊喜」</strong>
+              <span>首发300名持卡人，按卡号序列获得分档权益，从坐花车游上海到 IP 盲盒，越早办卡惊喜越大。</span>
+            </div>
+            <div class="text-card">
+              <strong>板块二·用卡权益：「每一笔消费，都在靠近你的隐藏款」</strong>
+              <span>消费达标即可解锁盲盒抽取资格，三层奖池对应不同消费门槛，月月重置，月月有期待。</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide clean" id="p04" data-page="04">
+        <div class="slide-inner grid">
+          <div class="copy reveal">
+            <div class="kicker" data-no="04">首发机制说明</div>
+            <h2>线下首发，卡号定胜负</h2>
+            <p class="lead">首发当日，全上海10个指定 IP 主题网点同步开放，上午10:00起，先到先办。以实际办卡的卡号末三位序号为准（001-300），10个网点全网同步排名。</p>
+            <ul class="list">
+              <li>真实到场，公平透明：现场取号，卡号即名次，有迹可循。</li>
+              <li>排队即内容：首发日网点排队的盛况，天然成为社交媒体传播素材。</li>
+              <li>放大仪式感：线下亲手拿到卡、现场开箱，比线上“下单成功”更有记忆点。</li>
+            </ul>
+          </div>
+          <div class="ticket-demo reveal">
+            <div class="art">
+              <img src="assets/generated/page04-ticket-element-transparent-v1.png" alt="排号机、卡面和来浦发狮子IP元素">
+            </div>
+            <button class="call-button" id="callTicket">点击读号机：打印 001</button>
+            <div class="number-row" id="ticketNumbers">
+              <div class="number-card is-on">001</div>
+              <div class="number-card">020</div>
+              <div class="number-card">100</div>
+              <div class="number-card">300</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide clean" id="p05" data-page="05">
+        <div class="slide-inner">
+          <div class="copy reveal">
+            <div class="kicker" data-no="05">首发300名·权益分层总览</div>
+            <h2>你的卡号，决定你的惊喜等级</h2>
+            <p class="lead">每一层权益点击后，右侧呈现对应身份、文字说明与权益图示。汇报时可以逐层点开，讲清“越早办卡，惊喜越大”。</p>
+          </div>
+          <div class="tier-layout reveal">
+            <div class="tier-tabs" id="tierTabs"></div>
+            <div class="tier-detail panel" id="tierDetail"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide clean" id="p06" data-page="06">
+        <div class="slide-inner grid reverse">
+          <div class="art reveal">
+            <img src="assets/generated/page06-ipvip-kit-transparent-v1.png" alt="IP VIP身份权益透明元素">
+          </div>
+          <div class="copy reveal">
+            <div class="kicker" data-no="06">IP VIP 身份权益</div>
+            <h2>不只是一张卡，<br>是一个身份</h2>
+            <p class="lead">前100名首发持卡人，获得终身「IP VIP」身份。这不是一次性福利，而是日常生活中持续生效的专属待遇。</p>
+            <div class="three-col">
+              <div class="metric-card"><strong>专属身份</strong><span>首发编号、IP VIP 电子身份牌、专属卡套。</span></div>
+              <div class="metric-card"><strong>优先权益</strong><span>IP 活动、文创上新、线下快闪优先参与。</span></div>
+              <div class="metric-card"><strong>长期经营</strong><span>把首发用户变成后续内容和活动的核心种子用户。</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide clean" id="p07" data-page="07">
+        <div class="slide-inner grid">
+          <div class="copy reveal">
+            <div class="kicker" data-no="07">IP首发收藏箱</div>
+            <h2>打开箱子的那一刻，<br>就是传播的开始</h2>
+            <p class="lead">收藏箱不做“赠品包”，而做成用户愿意拍照、愿意晒出来的首发证据。</p>
+            <div class="panel panel-pad">
+              <ul class="list">
+                <li>IP 玩偶 5-8 款：来来 / 浦浦 / 发发系列。</li>
+                <li>IP 主题杯 1 个：网点同款。</li>
+                <li>IP 冰箱贴 1 套：多款造型。</li>
+                <li>卡片赠言书：首发编号与收藏说明。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="art reveal">
+            <img src="assets/generated/page07-collector-box-transparent-v1.png" alt="IP首发收藏箱透明元素">
+          </div>
+        </div>
+      </section>
+
+      <section class="slide clean" id="p08" data-page="08">
+        <div class="slide-inner">
+          <div class="copy reveal">
+            <div class="kicker" data-no="08">用卡权益·盲盒机制</div>
+            <h2>每一笔消费，<br>都在靠近你的隐藏款</h2>
+            <p class="lead">持卡消费达标即可解锁盲盒抽取资格，三层奖池对应不同消费门槛：基础池拿文创小物，进阶池拿手办包挂，尊享池拿收藏级大件。</p>
+          </div>
+          <div class="pool-layout reveal">
+            <div class="pool">
+              <div class="pool-card is-active" data-pool="0"><h3>基础池</h3><p>日常小确幸：手机链、环保袋、笔记本、贴纸等轻文创。</p></div>
+              <div class="pool-card" data-pool="1"><h3>进阶池</h3><p>消费达标后开启：包挂、手办、城市主题文创。</p></div>
+              <div class="pool-card" data-pool="2"><h3>尊享池</h3><p>收藏级大件与限量款：玩偶、蓝牙音箱、永生花等。</p></div>
+            </div>
+            <div class="pool-full-visual panel" id="poolVisual">
+              <img src="assets/generated/page08-blindbox-pools-transparent-v1.png" alt="基础池、进阶池、尊享池盲盒奖品完整图">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide clean" id="p09" data-page="09">
+        <div class="slide-inner">
+          <div class="copy reveal">
+            <div class="kicker" data-no="09">8月传播节奏</div>
+            <h2>从 IP 生日启动，<br>到首发长尾承接</h2>
+          </div>
+          <div class="timeline reveal">
+            <div class="step-card"><span class="time">8月上旬</span><strong>预热期</strong><span>官宣 IP 卡首发活动，释放花车体验席核心钩子，展示大礼包内容。</span></div>
+            <div class="step-card"><span class="time">8月中下旬</span><strong>首发期</strong><span>10个网点同步首发，排队办卡、现场取号、首发开箱成为内容。</span></div>
+            <div class="step-card"><span class="time">8月下旬</span><strong>用卡期</strong><span>盲盒机制上线，用消费任务持续制造小期待。</span></div>
+            <div class="step-card"><span class="time">8月底-9月</span><strong>承接期</strong><span>首发用户晒图、隐藏款揭晓，为旅游节场景留下接口。</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide clean" id="p10" data-page="10">
+        <div class="slide-inner">
+          <div class="copy reveal">
+            <div class="kicker" data-no="10">串联页</div>
+            <h2>8月打开一张卡，9月打开一座城</h2>
+            <p class="lead">IP 卡方案已经完成“办卡有惊喜，用卡有期待”的用户机制；上海旅游节方案，则把这种“开箱期待”从卡和文创，放大到整座城市。</p>
+          </div>
+          <div class="transition-stage panel reveal">
+            <img src="assets/generated/page10-card-to-city-blindbox-transparent-v1.png" alt="浦发IP卡变成上海城市盲盒转场主视觉">
+          </div>
+        </div>
+      </section>
+
+      <section class="slide clean" id="p11" data-page="11">
+        <div class="slide-inner">
+          <div class="copy reveal">
+            <div class="kicker" data-no="11">核心信息速览</div>
+            <h2>9 月，进入上海旅游节方案</h2>
+            <p class="lead">大主题继续使用「乐游一座城」。今年的创意打开方式，是把城市目的地、浦发权益、产品服务和 IP 资产，装进一个可以逐层打开的“上海新盲盒”。</p>
+          </div>
+          <div class="three-col reveal">
+            <div class="text-card"><strong>核心洞察</strong><span>附近的远方、精神补偿型消费、小众新火目的地，正在成为城市微旅行的新选择。</span></div>
+            <div class="text-card"><strong>创意概念</strong><span>这座城的盲盒，你还没开完。每到一处，都是一次新的打开。</span></div>
+            <div class="text-card"><strong>品牌角色</strong><span>浦发不仅提供消费权益，也连接游客、市民、商户、文旅企业与城市服务场景。</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide clean" id="p12" data-page="12">
+        <div class="slide-inner">
+          <div class="copy reveal">
+            <div class="kicker" data-no="12">旅游节官方背景</div>
+            <h2>乐游一座城：<br>今年官方在做什么？</h2>
+            <p class="lead">2026年“一节两季”：经典活动季 9月1日-10月6日，覆盖中秋与国庆黄金窗口。</p>
+          </div>
+          <div class="official-board panel reveal">
+            <div class="official-facts">
+              <div class="fact-card"><b>活动窗口</b><span>9月1日 - 10月6日</span></div>
+              <div class="fact-card"><b>节庆窗口</b><span>中秋 + 国庆</span></div>
+              <div class="fact-card"><b>浦发机会</b><span>权益 / 网点 / 花车</span></div>
+              <div class="fact-card"><b>内容抓手</b><span>城市路线 / 新盲盒</span></div>
+            </div>
+            <div class="official-tags">
+              <span class="pill gold">城市漫游周</span>
+              <span class="pill">亲子欢乐周</span>
+              <span class="pill">金秋消费周</span>
+              <span class="pill">首发首秀周</span>
+              <span class="pill">海派生活周</span>
+              <span class="pill">潮流体验周</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide clean" id="p13" data-page="13">
+        <div class="slide-inner">
+          <div class="copy reveal">
+            <div class="kicker" data-no="13">三个洞察，一个方向</div>
+            <h2>不能只讲“省钱优惠”，<br>要讲“帮你打开生活中的美好”</h2>
+          </div>
+          <div class="three-col reveal">
+            <div class="text-card"><strong>精神补偿型消费</strong><span>不是不花钱，是把钱花在“值了”的体验上。权益要变成体验理由。</span></div>
+            <div class="text-card"><strong>附近的远方</strong><span>不用离开上海，也能拥有“像旅行一样”的新鲜感。</span></div>
+            <div class="text-card"><strong>小众新火目的地</strong><span>避开拥挤大景点，把城市里没拆完的新盲盒打开。</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide clean" id="p14" data-page="14">
+        <div class="slide-inner grid">
+          <div class="copy reveal">
+            <div class="kicker" data-no="14">一句话说清今年干什么</div>
+            <h2>这座城的盲盒，<br>你还没开完</h2>
+            <div class="quote">在「附近的远方」里，<br>帮用户打开<br>他还没拆过的上海新盲盒——用浦发。</div>
+            <ul class="list">
+              <li>核心洞察：附近的远方。</li>
+              <li>创意概念：上海新盲盒。</li>
+              <li>品牌主张：来浦发，开启上海新盲盒。</li>
+            </ul>
+          </div>
+          <div class="art reveal">
+            <img src="assets/generated/page14-key-city-blindbox-transparent-v1.png" alt="钥匙打开上海城市盲盒透明元素">
+          </div>
+        </div>
+      </section>
+
+      <section class="slide clean" id="p15" data-page="15">
+        <div class="slide-inner">
+          <div class="copy reveal">
+            <div class="kicker" data-no="15">品牌串联</div>
+            <h2>一个「新」字，从卡到城</h2>
+            <p class="lead">8 月 IP 卡发布到 9 月旅游节激活，天然一体，但不是强行合并。串联的是“刷新”和“开新”的用户感受。</p>
+          </div>
+          <div class="three-col reveal">
+            <div class="text-card"><strong>新卡</strong><span>IP 卡刷新人生新可能，先建立年轻化产品声量。</span></div>
+            <div class="text-card"><strong>新城</strong><span>旅游节打开上海新盲盒，把体验从卡面扩大到城市现场。</span></div>
+            <div class="text-card"><strong>新权益</strong><span>浦发权益串联办卡、用卡、到店、消费与文旅目的地。</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide clean" id="p16" data-page="16">
+        <div class="slide-inner">
+          <div class="copy reveal">
+            <div class="kicker" data-no="16">整体传播节奏</div>
+            <h2>预告线造悬念，活动线做爆发，<br>权益线做转化</h2>
+          </div>
+          <div class="timeline reveal">
+            <div class="step-card"><span class="time">9月10日起</span><strong>预热蓄势</strong><span>预告线：三超花车工厂连续发布 7 条花车视频，悬念拉满。</span></div>
+            <div class="step-card"><span class="time">9月20日起</span><strong>正式爆发</strong><span>活动线：第 8 条主题片上线，上海新盲盒主视觉全面启动。</span></div>
+            <div class="step-card"><span class="time">旅游节期间</span><strong>权益承接</strong><span>刷卡解锁盲盒、到店打卡、浦发银行APP互动收集同步推进。</span></div>
+            <div class="step-card"><span class="time">10月6日前后</span><strong>长尾沉淀</strong><span>高光混剪、路线合集、用户内容与网点服务沉淀。</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide clean" id="p17" data-page="17">
+        <div class="slide-inner grid">
+          <div class="copy reveal">
+            <div class="kicker" data-no="17">预告线</div>
+            <h2>三超花车工厂</h2>
+            <p class="lead">在上海你不知道的地方，藏着浦发的花车工厂。参考标杆：可口可乐「Happiness Factory（快乐工厂）」；浦发版本：在上海某个神秘角落，三小只正在造一支会开进城市的花车队。</p>
+            <div class="reference-card panel is-open" id="referenceCard">
+              <div class="reference-head">
+                <strong>参考语法：从 Happiness Factory 到浦发花车工厂</strong>
+              </div>
+              <div class="reference-body">
+                <div class="text-card"><strong>神秘工厂宇宙</strong><span>把品牌能力放进一个可连续展开的内部世界。</span></div>
+                <div class="text-card"><strong>每集一个任务</strong><span>产品/平台变成花车建造任务，天然适合系列短片。</span></div>
+                <div class="text-card"><strong>片尾驶向现实</strong><span>花车造完驶出工厂，衔接旅游节城市活动线。</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="art reveal">
+            <img src="assets/generated/page17-float-factory-transparent-v1.png" alt="三超花车工厂透明元素">
+          </div>
+        </div>
+      </section>
+
+      <section class="slide clean" id="p18" data-page="18">
+        <div class="slide-inner grid reverse">
+          <div class="art reveal">
+            <img src="assets/generated/page18-role-story-transparent-v2-no-shanshan.png" alt="角色设定与剧情结构透明元素">
+          </div>
+          <div class="copy reveal">
+            <div class="kicker" data-no="18">角色设定与剧情结构</div>
+            <h2>三小只负责造梦，花车负责开进城市</h2>
+            <p class="lead">角色页不需要把人物讲小，重点是让领导一眼看到：谁在推动剧情，谁负责制造笑点，谁把产品能力放进花车。</p>
+            <div class="role-strip">
+              <div class="text-card"><strong>三小只</strong><span>花车工厂的创意总监，每集轮流负责想创意、造花车。</span></div>
+              <div class="text-card"><strong>考拉</strong><span>慢性子助手，“我去找个东西”成为轻松笑点。</span></div>
+              <div class="text-card"><strong>狮子</strong><span>稳定担当，把浦发产品能力装进花车。</span></div>
+              <div class="text-card"><strong>每集结构</strong><span>任务下达 → 出状况 → 花车完成亮相 → 片尾驶出。</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide clean" id="p19" data-page="19">
+        <div class="slide-inner">
+          <div class="copy reveal">
+            <div class="kicker" data-no="19">7条花车视频 × 7大产品/平台</div>
+            <h2>横向点击花车，右侧展开一句话</h2>
+            <p class="lead">花车图弱化为示意，不抢正文。汇报时点击每辆花车，突出对应产品、产品一句话与花车创意方向。</p>
+          </div>
+          <div class="float-track reveal" id="floatTrack"></div>
+          <div class="float-layout reveal">
+            <div class="float-tabs" id="floatTabs"></div>
+            <div class="float-detail panel" id="floatDetail"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide clean" id="p20" data-page="20">
+        <div class="slide-inner">
+          <div class="copy reveal">
+            <div class="kicker" data-no="20">从“造”到“开”</div>
+            <h2>从“造花车”，到“开上海”</h2>
+            <p class="lead">花车工厂负责制造悬念，上海新盲盒负责进入真实城市体验。</p>
+          </div>
+          <div class="bridge-stage reveal">
+            <div class="bridge-art panel">
+              <img src="assets/generated/page17-float-factory-transparent-v1.png" alt="花车工厂">
+            </div>
+            <div class="bridge-arrow">→</div>
+            <div class="bridge-art panel">
+              <img src="assets/generated/page22-theme-film-city-blindboxes-transparent-v1.png" alt="上海新盲盒">
+            </div>
+          </div>
+          <div class="bridge-lines reveal">
+            <div class="formula-row"><b>预告线</b><span>讲“怎么造的”：悬念、趣味、品牌宇宙建设。</span></div>
+            <div class="formula-row"><b>活动线</b><span>讲“开到哪去了”：场景、体验、消费转化。</span></div>
+            <div class="formula-row"><b>转场句</b><span>花车已就位，来浦发，开启上海新盲盒。</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide clean" id="p21" data-page="21">
+        <div class="slide-inner grid">
+          <div class="copy reveal">
+            <div class="kicker" data-no="21">活动线选景策略</div>
+            <h2>小众 × 新火 × 不挤 × 附近的远方</h2>
+            <ul class="list">
+              <li>小众：避开外滩、豫园等大众已知目的地。</li>
+              <li>新火：近 1-2 年新开业或刚开始小火。</li>
+              <li>不挤：降低“人挤人”心理门槛，体验天然好。</li>
+              <li>附近的远方：不离开上海，也像完成一次旅行。</li>
+            </ul>
+          </div>
+          <div class="art reveal">
+            <img src="assets/generated/page21-destination-board-v2.png" alt="小众新火目的地路线选择板">
+          </div>
+        </div>
+      </section>
+
+      <section class="slide clean" id="p22" data-page="22">
+        <div class="slide-inner grid reverse">
+          <div class="art reveal">
+            <img src="assets/generated/page22-theme-film-city-blindboxes-transparent-v1.png" alt="旅游节主题片城市盲盒透明元素">
+          </div>
+          <div class="copy reveal">
+            <div class="kicker" data-no="22">第8条视频：旅游节主题片</div>
+            <h2>这座城的盲盒，你还没开完</h2>
+            <ul class="list">
+              <li>区别去年“吃喝篇 + 游乐篇”双线，今年合为一条主线：开盲盒。</li>
+              <li>串联多个小众新火目的地，每到一处 = 开一个盲盒。</li>
+              <li>调性：第一人称的“发现惊喜”，而不是常规城市宣传片。</li>
+              <li>片尾落版：「来浦发，开启上海新盲盒」。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide clean" id="p23" data-page="23">
+        <div class="slide-inner grid">
+          <div class="copy reveal">
+            <div class="kicker" data-no="23">线上线下联动</div>
+            <h2>网点小册子，把线下变成旅行第一站</h2>
+            <p class="lead">这一页不做 APP 界面图，重点用“攻略小册子”的实体感，讲清浦发网点如何承接旅游节场景。</p>
+            <div class="linkage-path">
+              <div class="text-card"><strong>浦发网点</strong><span>提供周边小众景点攻略小册子 + 休息区，网点变“旅行第一站”。</span></div>
+              <div class="text-card"><strong>浦发银行APP</strong><span>“盲盒收集”互动功能，到店 / 消费解锁更多城市盲盒。</span></div>
+              <div class="text-card"><strong>刷卡权益</strong><span>旅游节期间刷卡消费 = 更多盲盒抽取机会。</span></div>
+              <div class="text-card"><strong>8月IP新卡</strong><span>持新卡开盲盒享专属加码权益。</span></div>
+            </div>
+          </div>
+          <div class="art booklet reveal" id="bookletArt">
+            <img src="assets/generated/page23-branch-guide-booklets-transparent-v1.png" alt="浦发网点旅游节攻略小册子透明元素">
+            <div class="booklet-spread" aria-hidden="true">
+              <div class="booklet-page">
+                <b>浦发网点</b>
+                <span>周边小众景点攻略</span>
+                <span>休息区 / 咨询 / 打卡</span>
+                <span>旅行第一站</span>
+              </div>
+              <div class="booklet-page">
+                <b>开启新盲盒</b>
+                <span>到店领取路线</span>
+                <span>APP收集盲盒</span>
+                <span>刷卡解锁权益</span>
+              </div>
+            </div>
+            <button class="call-button" id="openBooklet" style="margin:22px auto 0; display:block;">点击翻开小册子</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide spotlight" id="p24" data-page="24">
+        <div class="slide-inner">
+          <div class="copy reveal">
+            <div class="kicker" data-no="24">总结页</div>
+            <h2>造 → 开 → 刷</h2>
+            <p class="lead">一个「新」字贯穿始终：新卡刷新生活，新盲盒打开城市，新权益承接转化。</p>
+          </div>
+          <div class="summary-flow reveal">
+            <div class="text-card"><strong>造</strong><span>三超花车工厂 · 7条预热视频 · 9月10日起连发。</span></div>
+            <div class="text-card"><strong>开</strong><span>上海新盲盒 · 主题片 + 活动全面启动 · 9月20日起。</span></div>
+            <div class="text-card"><strong>刷</strong><span>浦发新卡 · 刷卡解锁盲盒 · 贯穿至10月6日。</span></div>
+            <div class="text-card"><strong>沉淀</strong><span>IP 资产、城市路线、网点服务与产品矩阵共同留下来。</span></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const tierData = [
+      {
+        range: "001-020",
+        name: "花车体验官",
+        title: "坐花车游上海",
+        copy: "前20名获得最高级别首发权益，成为旅游节花车体验官，拥有最强社交传播点。",
+        visual: "全量权益",
+        pieces: [
+          { label: "花车体验", img: "assets/generated/page05-benefits-v2/page05-benefit-01-float-experience.png" },
+          { label: "IP收藏箱", img: "assets/generated/page05-benefits-v2/page05-benefit-02-ip-collector-box.png" },
+          { label: "美洲展门票", img: "assets/generated/page05-benefits-v2/page05-benefit-03-americas-ticket.png" },
+          { label: "IP文创权益", img: "assets/generated/page05-benefits-v2/page05-benefit-04-ip-cultural-gifts.png" },
+          { label: "隐藏款奖池", img: "assets/generated/page05-benefits-v2/page05-benefit-05-hidden-prize-pool.png" }
+        ]
+      },
+      {
+        range: "021-050",
+        name: "城市体验官",
+        title: "把城市权益一次打开",
+        copy: "获得高价值城市体验权益，适合作为首发第二梯队的传播承接。",
+        visual: "去掉花车体验",
+        pieces: [
+          { label: "IP收藏箱", img: "assets/generated/page05-benefits-v2/page05-benefit-02-ip-collector-box.png" },
+          { label: "美洲展门票", img: "assets/generated/page05-benefits-v2/page05-benefit-03-americas-ticket.png" },
+          { label: "IP文创权益", img: "assets/generated/page05-benefits-v2/page05-benefit-04-ip-cultural-gifts.png" },
+          { label: "隐藏款奖池", img: "assets/generated/page05-benefits-v2/page05-benefit-05-hidden-prize-pool.png" }
+        ]
+      },
+      {
+        range: "051-100",
+        name: "首发藏家",
+        title: "终身 IP VIP 身份",
+        copy: "前100名进入长期经营池，身份权益不是一次性福利，而是持续生效。",
+        visual: "再减一档",
+        pieces: [
+          { label: "美洲展门票", img: "assets/generated/page05-benefits-v2/page05-benefit-03-americas-ticket.png" },
+          { label: "IP文创权益", img: "assets/generated/page05-benefits-v2/page05-benefit-04-ip-cultural-gifts.png" },
+          { label: "隐藏款奖池", img: "assets/generated/page05-benefits-v2/page05-benefit-05-hidden-prize-pool.png" }
+        ]
+      },
+      {
+        range: "101-150",
+        name: "IP玩家",
+        title: "把用卡变成持续任务",
+        copy: "用卡达标后持续解锁盲盒奖池，让用户愿意留下来继续玩。",
+        visual: "玩法权益",
+        pieces: [
+          { label: "IP文创权益", img: "assets/generated/page05-benefits-v2/page05-benefit-04-ip-cultural-gifts.png" },
+          { label: "隐藏款奖池", img: "assets/generated/page05-benefits-v2/page05-benefit-05-hidden-prize-pool.png" }
+        ]
+      },
+      {
+        range: "151-300",
+        name: "IP粉丝",
+        title: "首发参与感也要被看见",
+        copy: "覆盖更大规模首发用户，形成网点排队、晒卡、晒文创的传播底盘。",
+        visual: "基础参与",
+        pieces: [
+          { label: "隐藏款奖池", img: "assets/generated/page05-benefits-v2/page05-benefit-05-hidden-prize-pool.png" }
+        ]
+      }
+    ];
+
+    const floatData = [
+      {
+        no: "1",
+        name: "科技号",
+        product: "浦科贷",
+        sentence: "铺好创新创业“最初一公里”，打通科技成果转化“最后一公里”",
+        direction: "未来实验室风格，AI机器人主力造车。",
+        img: "assets/generated/page19-floats/page19-float-01.png"
+      },
+      {
+        no: "2",
+        name: "链动号",
+        product: "浦链通",
+        sentence: "以链主企业信用传递，支撑稳链、固链、强链、补链",
+        direction: "链条、齿轮、物流轨道，把供应链金融视觉化。",
+        img: "assets/generated/page19-floats/page19-float-02.png"
+      },
+      {
+        no: "3",
+        name: "赢家号",
+        product: "浦赢并购",
+        sentence: "彼此成就，共生共长，共赢共荣",
+        direction: "棋盘、皇冠、城市版图，表达资源整合与共赢。",
+        img: "assets/generated/page19-floats/page19-float-03.png"
+      },
+      {
+        no: "4",
+        name: "惠民号",
+        product: "浦惠贷",
+        sentence: "及时响应小微企业经营运转的资金需求",
+        direction: "热闹街区与小店经营，讲旅游节背后的小微商户。",
+        img: "assets/generated/page19-floats/page19-float-04.png"
+      },
+      {
+        no: "5",
+        name: "闪耀号",
+        product: "浦闪贷",
+        sentence: "在线审批、及时放款、随借随还",
+        direction: "快速通道、光效和消费场景，表达即时入场。",
+        img: "assets/generated/page19-floats/page19-float-05.png"
+      },
+      {
+        no: "6",
+        name: "北斗号",
+        product: "北斗司库",
+        sentence: "看得见、管得住、调得动、用得好",
+        direction: "北斗星轨与城市资金中枢，表达企业资金管理。",
+        img: "assets/generated/page19-floats/page19-float-06.png"
+      },
+      {
+        no: "7",
+        name: "薪动号",
+        product: "靠浦薪",
+        sentence: "智汇人财事，靠浦薪相伴",
+        direction: "办公、人事、薪酬和服务团队，讲热闹背后的员工服务。",
+        img: "assets/generated/page19-floats/page19-float-07.png"
+      }
+    ];
+
+    const nowLabel = document.getElementById("pageNow");
+    const deckTitle = document.getElementById("deckTitle");
+    const revealNodes = Array.from(document.querySelectorAll(".reveal"));
+    const slides = Array.from(document.querySelectorAll(".slide"));
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        }
+      });
+    }, { threshold: .18 });
+
+    revealNodes.forEach((node) => revealObserver.observe(node));
+
+    const slideObserver = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (!visible) return;
+      const page = visible.target.dataset.page;
+      nowLabel.textContent = page;
+      const kicker = visible.target.querySelector(".kicker");
+      const heading = visible.target.querySelector("h1, h2");
+      deckTitle.textContent = visible.target.dataset.title || (kicker ? kicker.textContent : (heading ? heading.textContent : "开启新可能"));
+    }, { threshold: .3 });
+
+    slides.forEach((slide) => slideObserver.observe(slide));
+
+    const tierTabs = document.getElementById("tierTabs");
+    const tierDetail = document.getElementById("tierDetail");
+
+    function renderTier(index) {
+      const item = tierData[index];
+      tierTabs.querySelectorAll("button").forEach((button, buttonIndex) => {
+        button.classList.toggle("is-active", buttonIndex === index);
+      });
+
+      tierDetail.innerHTML = `
+        <div class="tier-detail-copy">
+          <h3>${item.range}｜${item.name}</h3>
+          <p class="lead">${item.title}</p>
+          <p class="body-text">${item.copy}</p>
+          <span class="benefit-rank">${item.visual}</span>
+        </div>
+        <div class="benefit-showcase" style="--piece-w: ${item.pieces.length >= 5 ? "150px" : item.pieces.length === 4 ? "168px" : item.pieces.length === 3 ? "205px" : item.pieces.length === 2 ? "245px" : "330px"};">
+          ${item.pieces.map((piece, pieceIndex) => `
+            <div class="benefit-piece" style="animation-delay:${pieceIndex * 70}ms;">
+              <div class="benefit-crop"><img src="${piece.img}" alt="${piece.label}权益图"></div>
+              <div class="benefit-label">${piece.label}</div>
+            </div>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    tierData.forEach((item, index) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "tier-button";
+      button.innerHTML = `${item.range}｜${item.name}<small>${item.title}</small>`;
+      button.addEventListener("click", () => renderTier(index));
+      tierTabs.appendChild(button);
+    });
+    renderTier(0);
+
+    const poolCards = Array.from(document.querySelectorAll(".pool-card"));
+
+    poolCards.forEach((card, index) => {
+      card.addEventListener("click", () => {
+        poolCards.forEach((node, nodeIndex) => {
+          node.classList.toggle("is-active", nodeIndex === index);
+        });
+      });
+    });
+
+    const floatTrack = document.getElementById("floatTrack");
+    const floatTabs = document.getElementById("floatTabs");
+    const floatDetail = document.getElementById("floatDetail");
+
+    function renderFloat(index) {
+      const item = floatData[index];
+      floatTabs.querySelectorAll("button").forEach((button, buttonIndex) => {
+        button.classList.toggle("is-active", buttonIndex === index);
+      });
+      floatTrack.querySelectorAll("button").forEach((button, buttonIndex) => {
+        button.classList.toggle("is-active", buttonIndex === index);
+      });
+
+      floatDetail.innerHTML = `
+        <div>
+          <h3>${item.no}｜${item.name} × ${item.product}</h3>
+          <p class="lead">${item.sentence}</p>
+          <p class="body-text">${item.direction}</p>
+        </div>
+        <div class="detail-art">
+          <img src="${item.img}" alt="${item.name}透明花车图">
+        </div>
+      `;
+    }
+
+    floatData.forEach((item, index) => {
+      const mini = document.createElement("button");
+      mini.type = "button";
+      mini.className = "float-mini";
+      mini.setAttribute("aria-label", `${item.name} ${item.product}`);
+      mini.innerHTML = `<img src="${item.img}" alt="">`;
+      mini.addEventListener("click", () => renderFloat(index));
+      floatTrack.appendChild(mini);
+
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "float-button";
+      button.innerHTML = `${item.no}｜${item.name}<small>${item.product}</small>`;
+      button.addEventListener("click", () => renderFloat(index));
+      floatTabs.appendChild(button);
+    });
+    renderFloat(0);
+
+    const callTicket = document.getElementById("callTicket");
+    const ticketNumbers = Array.from(document.querySelectorAll(".number-card"));
+    let ticketIndex = 0;
+
+    callTicket.addEventListener("click", () => {
+      ticketNumbers.forEach((node) => node.classList.remove("is-on"));
+      ticketNumbers[ticketIndex].classList.add("is-on");
+      callTicket.textContent = `点击读号机：打印 ${ticketNumbers[ticketIndex].textContent}`;
+      ticketIndex = (ticketIndex + 1) % ticketNumbers.length;
+    });
+
+    const toggleReference = document.getElementById("toggleReference");
+    if (toggleReference) {
+      toggleReference.addEventListener("click", () => {
+        document.getElementById("referenceCard").classList.toggle("is-open");
+      });
+    }
+
+    document.getElementById("openBooklet").addEventListener("click", () => {
+      document.getElementById("bookletArt").classList.toggle("is-open");
+    });
+
+  </script>
+</body>
+</html>
